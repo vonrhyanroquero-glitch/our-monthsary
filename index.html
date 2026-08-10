@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Von ♡ Angel | Our First Monthsary</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div id="hearts"></div>
+
+  <!-- INTRO -->
+  <section class="screen active" id="intro">
+    <div class="glow"></div>
+    <div class="intro-card">
+      <p class="small-label">A little surprise for</p>
+      <h1>Angel</h1>
+      <div class="divider">♡</div>
+      <p class="subtitle">From your husband, Von</p>
+      <button class="main-btn" onclick="showScreen('date')">Open My Surprise <span>♡</span></button>
+    </div>
+  </section>
+
+  <!-- DATE LOCK -->
+  <section class="screen" id="date">
+    <div class="lock-card">
+      <div class="lock-heart">♡</div>
+      <p class="small-label">Just one little question...</p>
+      <h2>When is our special date?</h2>
+      <p class="hint">Enter our monthsary date</p>
+
+      <div class="date-display" id="dateDisplay">_ _ / _ _</div>
+
+      <div class="keypad">
+        <button onclick="pressKey('1')">1</button><button onclick="pressKey('2')">2</button><button onclick="pressKey('3')">3</button>
+        <button onclick="pressKey('4')">4</button><button onclick="pressKey('5')">5</button><button onclick="pressKey('6')">6</button>
+        <button onclick="pressKey('7')">7</button><button onclick="pressKey('8')">8</button><button onclick="pressKey('9')">9</button>
+        <button class="clear" onclick="clearDate()">×</button><button onclick="pressKey('0')">0</button><button class="enter" onclick="checkDate()">♡</button>
+      </div>
+      <p class="error" id="dateError"></p>
+    </div>
+  </section>
+
+  <!-- HOME -->
+  <section class="screen" id="home">
+    <div class="home-content">
+      <p class="small-label">July 17 • Our First Month</p>
+      <h1>Happy Monthsary,<br><span>My Love</span> ♡</h1>
+      <p class="intro-text">One month down, and I hope a lifetime to go.</p>
+
+      <div class="couple-names">Von <span>♡</span> Angel</div>
+
+      <div class="menu-grid">
+        <button class="menu-card" onclick="showScreen('letter')">
+          <span class="icon">💌</span>
+          <strong>My Love Letter</strong>
+          <small>A message from my heart</small>
+        </button>
+        <button class="menu-card" onclick="showScreen('memories')">
+          <span class="icon">📷</span>
+          <strong>Our Memories</strong>
+          <small>Little moments with you</small>
+        </button>
+        <button class="menu-card" onclick="showScreen('flowers')">
+          <span class="icon">🌷</span>
+          <strong>Flowers For You</strong>
+          <small>A little bouquet of love</small>
+        </button>
+        <button class="menu-card" onclick="showScreen('song')">
+          <span class="icon">🎵</span>
+          <strong>Our Song</strong>
+          <small>Maging Sino Ka Man</small>
+        </button>
+      </div>
+
+      <button class="tiny-btn" onclick="showScreen('final')">One more thing... ♡</button>
+    </div>
+  </section>
+
+  <!-- LETTER -->
+  <section class="screen" id="letter">
+    <div class="content-card letter-card">
+      <button class="back" onclick="showScreen('home')">← Back</button>
+      <p class="small-label">From your husband</p>
+      <h2>For My Wife, Angel</h2>
+      <div class="letter">
+        <p><b>Happy 1st Monthsary, my love. 🥺❤️</b></p>
+        <p>It may only be our first month, but I'm already grateful for every moment I've shared with you. Thank you for coming into my life and for giving me someone I can love, care for, laugh with, and call my wife.</p>
+        <p>I know one month may not sound like a long time, but for me, every day with you is something special. I'm thankful for the little conversations, the laughs, the moments we share, and even the times when things aren't perfect.</p>
+        <p>I don't promise that everything will always be easy. There may be days when we misunderstand each other or have problems, but I promise that I won't easily give up on us. I want us to grow together, learn together, and continue choosing each other through every season.</p>
+        <p>Angel, thank you for being you. You don't have to be perfect for me to love you. I love you for who you are, and I hope I can continue making you feel loved, appreciated, and safe with me.</p>
+        <p>This is only our first month, but I hope it's just the beginning of many more months and years together. I want to make more memories with you, experience more things with you, and someday look back at this first monthsary and smile at how far we've come.</p>
+        <p class="center-heart">♡</p>
+        <p><b>Happy 1st Monthsary.</b> ❤️</p>
+        <p>I love you, and I will keep choosing you.</p>
+        <p class="signature">Forever yours,<br><b>Von — your husband ❤️</b></p>
+      </div>
+    </div>
+  </section>
+
+  <!-- MEMORIES -->
+  <section class="screen" id="memories">
+    <div class="content-card">
+      <button class="back" onclick="showScreen('home')">← Back</button>
+      <p class="small-label">Our little story</p>
+      <h2>Our Memories 📷</h2>
+      <p class="section-note">Replace these placeholders with your favorite photos.</p>
+      <div class="gallery">
+        <div class="photo"><img src="images/photo1.jpg" onerror="this.style.display='none'; this.parentElement.classList.add('placeholder')"><span>Our first memory ♡</span></div>
+        <div class="photo"><img src="images/photo2.jpg" onerror="this.style.display='none'; this.parentElement.classList.add('placeholder')"><span>A moment with you ♡</span></div>
+        <div class="photo"><img src="images/photo3.jpg" onerror="this.style.display='none'; this.parentElement.classList.add('placeholder')"><span>One of my favorites ♡</span></div>
+        <div class="photo"><img src="images/photo4.jpg" onerror="this.style.display='none'; this.parentElement.classList.add('placeholder')"><span>Us, always ♡</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FLOWERS -->
+  <section class="screen" id="flowers">
+    <div class="content-card flower-card">
+      <button class="back" onclick="showScreen('home')">← Back</button>
+      <div class="bouquet">
+        <div class="flower f1">🌸</div>
+        <div class="flower f2">🌷</div>
+        <div class="flower f3">🌹</div>
+        <div class="flower f4">🌷</div>
+        <div class="flower f5">🌸</div>
+        <div class="stem"></div>
+      </div>
+      <p class="small-label">A bouquet for you</p>
+      <h2>These flowers are for you, Angel. 🌷</h2>
+      <p class="section-note">If I could, I'd give you a real bouquet every time I wanted to remind you how much you mean to me.</p>
+      <p class="flower-message">Thank you for being my favorite person. ♡</p>
+    </div>
+  </section>
+
+  <!-- SONG -->
+  <section class="screen" id="song">
+    <div class="content-card song-card">
+      <button class="back" onclick="showScreen('home')">← Back</button>
+      <div class="music-disc" id="disc">♪</div>
+      <p class="small-label">Our song</p>
+      <h2>Maging Sino Ka Man</h2>
+      <p class="section-note">A little song for the two of us. ❤️</p>
+      <audio id="music" controls>
+        <source src="music/maging-sino-ka-man.mp3" type="audio/mpeg">
+        Your browser does not support audio.
+      </audio>
+      <p class="music-note">Add your MP3 file to <b>music/maging-sino-ka-man.mp3</b>.</p>
+    </div>
+  </section>
+
+  <!-- FINAL -->
+  <section class="screen" id="final">
+    <div class="final-card">
+      <div class="final-hearts">♡ ♡ ♡</div>
+      <p class="small-label">And finally...</p>
+      <h1>I'm Glad It's<br><span>You.</span></h1>
+      <p>Von ♡ Angel</p>
+      <p class="date">07 • 17</p>
+      <div class="final-message">
+        <p>No matter where life takes us, I hope we always find our way back to each other.</p>
+        <p>Happy first monthsary, my wife.</p>
+        <p><b>I love you. ❤️</b></p>
+      </div>
+      <button class="main-btn" onclick="showScreen('home')">Back to our story ♡</button>
+    </div>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>
