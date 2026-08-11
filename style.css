@@ -82,7 +82,11 @@ body::before {
 
 .intro-card {
   text-align: center;
-  padding: 70px 30px;
+  padding: 40px 25px;
+  width: min(500px, 85vw);
+  background: rgba(255, 255, 255, 0.45);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
   position: relative;
   overflow: hidden;
 }
