@@ -27,6 +27,18 @@ body {
     radial-gradient(circle at 80% 70%, rgba(255,177,207,.45), transparent 32%),
     linear-gradient(135deg, #ffd8e7, #fff7fa 48%, #ffc5dc);
 }
+#intro {
+  background:
+    linear-gradient(
+      rgba(100, 25, 55, 0.50),
+      rgba(230, 70, 125, 0.30)
+    ),
+    url("images/first-page.jpg") center center / cover no-repeat;
+
+   background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
 
 body::before {
   content: "";
