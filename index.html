@@ -89,10 +89,10 @@
       <h2>For My Wife, Angel</h2>
       <div class="letter">
         <p><b>Happy 1st Monthsary, my love. 🥺❤️</b></p>
-        <p>It may only be our first month, but I'm already grateful for every moment I've shared with you. Thank you for coming into my life and for giving me someone I can love, care for, laugh with, and call my wife.</p>
+        <p>Bisan usa pa lang ka bulan ang milabay, mapasalamaton na kaayo ko sa matag gutlo nga giambitan ko uban nimo. Salamat sa pag-abot sa akong kinabuhi ug sa paghatag kanako og usa ka tawo nga akong mahigugma, maatiman, kaatubang sa kakatawa.</p>
         <p>I know one month may not sound like a long time, but for me, every day with you is something special. I'm thankful for the little conversations, the laughs, the moments we share, and even the times when things aren't perfect.</p>
         <p>I don't promise that everything will always be easy. There may be days when we misunderstand each other or have problems, but I promise that I won't easily give up on us. I want us to grow together, learn together, and continue choosing each other through every season.</p>
-        <p>Angel, thank you for being you. You don't have to be perfect for me to love you. I love you for who you are, and I hope I can continue making you feel loved, appreciated, and safe with me.</p>
+        <p>Gel, thank you for being you. You don't have to be perfect for me to love you. I love you for who you are, and I hope I can continue making you feel loved, appreciated, and safe with me.</p>
         <p>This is only our first month, but I hope it's just the beginning of many more months and years together. I want to make more memories with you, experience more things with you, and someday look back at this first monthsary and smile at how far we've come.</p>
         <p class="center-heart">♡</p>
         <p><b>Happy 1st Monthsary.</b> ❤️</p>
@@ -118,24 +118,101 @@
     </div>
   </section>
 
+  
   <!-- FLOWERS -->
-  <section class="screen" id="flowers">
-    <div class="content-card flower-card">
-      <button class="back" onclick="showScreen('home')">← Back</button>
-      <div class="bouquet">
-        <div class="flower f1">🌸</div>
-        <div class="flower f2">🌷</div>
-        <div class="flower f3">🌹</div>
-        <div class="flower f4">🌷</div>
-        <div class="flower f5">🌸</div>
-        <div class="stem"></div>
-      </div>
-      <p class="small-label">A bouquet for you</p>
-      <h2>These flowers are for you, Angel. 🌷</h2>
-      <p class="section-note">If I could, I'd give you a real bouquet every time I wanted to remind you how much you mean to me.</p>
-      <p class="flower-message">Thank you for being my favorite person. ♡</p>
+<section class="screen" id="flowers">
+  <div class="content-card flower-card interactive-flower-card">
+
+    <button class="back" onclick="showScreen('home')">← Back</button>
+
+    <p class="small-label">A bouquet for you</p>
+    <h2>Flowers for you, Langga. 🌷</h2>
+    <p class="section-note">
+      Tap each flower and watch your bouquet bloom. ❤️
+    </p>
+
+    <div class="real-bouquet" id="realBouquet">
+
+      <!-- Leaves -->
+      <div class="leaf leaf1"></div>
+      <div class="leaf leaf2"></div>
+      <div class="leaf leaf3"></div>
+      <div class="leaf leaf4"></div>
+      <div class="leaf leaf5"></div>
+
+      <!-- Stems -->
+      <div class="stem stem1"></div>
+      <div class="stem stem2"></div>
+      <div class="stem stem3"></div>
+      <div class="stem stem4"></div>
+      <div class="stem stem5"></div>
+
+      <!-- Flowers -->
+      <button class="real-flower flower-one" onclick="bloomFlower(this)">
+        <span class="petal p1"></span>
+        <span class="petal p2"></span>
+        <span class="petal p3"></span>
+        <span class="petal p4"></span>
+        <span class="petal p5"></span>
+        <span class="flower-center"></span>
+      </button>
+
+      <button class="real-flower flower-two" onclick="bloomFlower(this)">
+        <span class="petal p1"></span>
+        <span class="petal p2"></span>
+        <span class="petal p3"></span>
+        <span class="petal p4"></span>
+        <span class="petal p5"></span>
+        <span class="flower-center"></span>
+      </button>
+
+      <button class="real-flower flower-three" onclick="bloomFlower(this)">
+        <span class="petal p1"></span>
+        <span class="petal p2"></span>
+        <span class="petal p3"></span>
+        <span class="petal p4"></span>
+        <span class="petal p5"></span>
+        <span class="flower-center"></span>
+      </button>
+
+      <button class="real-flower flower-four" onclick="bloomFlower(this)">
+        <span class="petal p1"></span>
+        <span class="petal p2"></span>
+        <span class="petal p3"></span>
+        <span class="petal p4"></span>
+        <span class="petal p5"></span>
+        <span class="flower-center"></span>
+      </button>
+
+      <button class="real-flower flower-five" onclick="bloomFlower(this)">
+        <span class="petal p1"></span>
+        <span class="petal p2"></span>
+        <span class="petal p3"></span>
+        <span class="petal p4"></span>
+        <span class="petal p5"></span>
+        <span class="flower-center"></span>
+      </button>
+
     </div>
-  </section>
+
+    <p id="flowerHint" class="flower-hint">
+      Tap a flower to make it bloom 🌱
+    </p>
+
+    <div id="flowerSecret" class="flower-secret">
+      <div class="secret-heart">♡</div>
+      <p>
+        Just like these flowers, my love for you keeps blooming.
+      </p>
+      <strong>
+        Happy Monthsary, my Langga. ❤️
+      </strong>
+    </div>
+
+  </div>
+</section>
+```
+
 
   <!-- SONG -->
   <section class="screen" id="song">
@@ -158,7 +235,7 @@
     <div class="final-card">
       <div class="final-hearts">♡ ♡ ♡</div>
       <p class="small-label">And finally...</p>
-      <h1>I'm Glad It's<br><span>You.</span></h1>
+      <h1>Nalipay Ko Nga<br><span>Ikaw.</span></h1>
       <p>Von ♡ Angel</p>
       <p class="date">07 • 17</p>
       <div class="final-message">
